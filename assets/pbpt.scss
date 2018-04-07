@@ -26,7 +26,7 @@ nav.secondary-navigation {
 }
 
 #slide1 {
-	background: #ee4833;
+	background: #54a2f7;
 	color: rgba(255,255,255,0.88);
 	height: 100vh;
 	position: relative;
@@ -89,19 +89,26 @@ nav.secondary-navigation {
 		margin: 5vh 0 0;
 		position: relative;
 		z-index: 1;
-		//text-shadow: 0.01em 0.01em 0.025em #259;
+		text-shadow: 0.01em 0.01em 0.025em #259;
 		letter-spacing: 0.025em;
 	}
 	h3 {
 		font-size: 34px;
 		font-weight: 400;
 	}
-	h5 {
-		font-size: 25px;
-		font-weight: 400;
-		//text-shadow: 1px 1px 3px #259;
-	}
 
+	.fa-chevron-down {
+		display: block;
+		margin: auto;
+		width: 70px;
+		line-height: 70px;
+		font-size: 40px;
+		cursor: pointer;
+		border: 1px solid;
+		text-align: center;
+		border-radius: 999px;
+		text-shadow: 0.01em 0.01em 0.025em #259;
+	}
 
 	.fa-cloud {
 		font-size: 160px;
@@ -152,32 +159,24 @@ nav.secondary-navigation {
 		margin: 2.5em auto .2em;
 	}
 
-	.pricing-tabs-a {
-		margin: 2em auto;
-		a {
-			display: inline-block;
-			font-size: 20px;
-			width: 169px;
-			border-bottom: 1px solid #aaa;
-			opacity: .5;
-			margin: 11px;
-			color: #222;
-			&:focus {
-				outline: none;
-			}
-			&.active {
-				border-bottom: 1px solid;
-				opacity: .88;
-			}
+	.license-type-toggle {
+		margin: 3.4em auto 2em;
+		font-size: 20px;
+		font-weight: 100;
+		label {
+			font: inherit;
+		}
+		input {
+			vertical-align: middle;
+			margin: 5px 7px 11px 16px;
 		}
 	}
 
 	.bundle-features {
 		flex: 1 0 250px;
-		border-radius: 7px;
 		overflow: hidden;
 		border: 1px solid #0073aa;
-		margin: 7px;
+		margin: 4px;
 		h3 {
 			background: #0073aa;
 			color: #fff;
@@ -231,34 +230,34 @@ nav.secondary-navigation {
 			background: #0073aa;
 			color: #fff;
 			display: block;
+			margin: 7px;
 		}
 	}
 	.ecomm-bundle {
-		border: 1px solid #9b5b8f;
+		border: 1px solid #5d9ebd;
 		.price, .button, h3 {
-			background: #9b5b8f;
+			background: #5d9ebd;
 		}
 	}
 	.design-bundle {
-		border: 1px solid #e09c12;
+		border: 1px solid #4882ba;
 		.price, .button, h3 {
-			background: #e09c12;
+			background: #4882ba;
+		}
+	}
+	.pro-bundle {
+		border: 1px solid #ce6c69;
+		.price, .button, h3 {
+			background: #ce6c69;
 		}
 	}
 
 	.pricing-tabs {
-		margin: 2em auto;
-		max-width: 880px;
-		padding: 16px;
-		overflow: auto;
+		margin: 2em -4px;
 		display:flex;
 		justify-content: stretch;
 	}
 
-	.col-full {
-		margin: 10px auto;
-		max-width: calc( 100vw - 70px );
-	}
 }
 
 #slide3 {
@@ -274,101 +273,5 @@ nav.secondary-navigation {
 	}
 	100% {
 		transform: translateX(25%);
-	}
-}
-
-.ppb-tpl {
-	width: calc(33.33% - 20px);
-	float: left;
-	margin: 10px;
-	box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.5);
-	overflow: hidden;
-	cursor: pointer;
-	transition: all 0.5s, transform 0s;
-
-	img, i.fa-search, i.fa-close {
-		transition: all 0.5s;
-	}
-
-	img {
-		width: 100%;
-		border-radius: 0;
-	}
-
-	h3 {
-		margin: 0;
-		padding: 0.25em 0;
-		border-top: 1px solid rgba(0, 0, 0, 0.25);
-		background: #fff;
-		position: relative;
-		z-index: 1;
-		text-align: center;
-	}
-
-	i.fa-search,
-	i.fa-close {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		font-size: 30px;
-		line-height: 65px;
-		height: 70px;
-		width: 70px;
-		text-align: center;
-		background: rgba(0, 0, 0, 0.7);
-		border-radius: 50%;
-		color: #fff;
-		margin: -63px -35px;
-		opacity: 0.5;
-	}
-
-	i.fa-close {
-		top: 0;
-		left: auto;
-		right: 0;
-		display: none;
-		margin: 16px;
-		line-height: 34px;
-		height: 35px;
-		width: 35px;
-		font-size: 20px;
-		opacity: 0.3;
-		&:hover {
-			opacity: 0.5;
-		}
-	}
-
-	&:hover {
-		i.fa-search {
-			opacity: 0.88;
-		}
-		img {
-			-webkit-transform: scale(1.1);
-			transform: scale(1.1);
-		}
-	}
-}
-
-.showing-full {
-	.ppb-tpl {
-		opacity: 0.5;
-		&.show-full {
-			left: 0 !important;
-			width: 100% !important;
-			z-index: 999 !important;
-			opacity: 1;
-			margin: auto;
-			i.fa-search {
-				opacity: 0;
-			}
-
-			i.fa-close {
-				display: block;
-			}
-			img {
-				-webkit-transform: scale(1);
-				transform: scale(1);
-			}
-		}
 	}
 }

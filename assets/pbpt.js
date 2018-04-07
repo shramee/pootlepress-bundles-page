@@ -1,15 +1,20 @@
 jQuery( function ( $ ) {
 	var $tabs = $( '.pricing-tabs' ), sitesLicense = 1;
 
-	$( '.pricing-tabs-a a' ).click( function ( e ) {
+	$( '[name="licensed-site"]' ).change( function ( e ) {
 		var $t = $( this );
-		$t.addClass( 'active' ).siblings().removeClass( 'active' );
+		sitesLicense = $t.val();
+		$t.closest( 'label' ).addClass( 'active' ).siblings().removeClass( 'active' );
 		e.preventDefault();
 		$tabs.hide();
-		$tabs.filter( $t.attr( 'href' ) ).show();
-		sitesLicense = $t.data( 'sites-license' );
-	} ).filter( ':first-of-type' ).click();
+		$tabs.filter( '#license-' + sitesLicense ).show();
+	} ).filter( ':first' ).prop( 'checked', true ).change();
 
+	$( '#slide1' ).find( '.fa-chevron-down' ).click( function ( e ) {
+		$( 'html, body' ).animate( {
+			scrollTop: window.innerHeight
+		}, 'slow' );
+	} );
 	$( '.ecomm-bundle' ).on( 'click', '.button', function ( e ) {
 		FS.Checkout.configure( {
 			plugin_id: '1887',
