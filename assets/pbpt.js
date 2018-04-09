@@ -20,7 +20,8 @@ jQuery( function ( $ ) {
 			plugin_id: '1887',
 			plan_id: '2788',
 			public_key: 'pk_e8c600d38f23c090bcdce65c8fab5',
-			image: 'https://your-plugin-site.com/logo-100x100.png'
+			subtitle: 'Pootlepress Ecommerce bundle',
+			//image: 'https://your-plugin-site.com/logo-100x100.png'
 		} ).open( {
 			name: 'PPB and SFP',
 			licenses: sitesLicense,
@@ -39,7 +40,8 @@ jQuery( function ( $ ) {
 			plugin_id: '1939',
 			plan_id: '2879',
 			public_key: 'pk_3cf0993f839aa420f8a420d5c6ea5',
-			image: 'https://your-plugin-site.com/logo-100x100.png'
+			subtitle: 'Pootlepress Design bundle',
+			//image: 'https://your-plugin-site.com/logo-100x100.png'
 		} ).open( {
 			name: 'PPB and 18TP',
 			licenses: sitesLicense,
@@ -58,7 +60,8 @@ jQuery( function ( $ ) {
 			plugin_id: '1940',
 			plan_id: '2880',
 			public_key: 'pk_7587c7d9ed93da31650a8f6b1a417',
-			image: 'https://your-plugin-site.com/logo-100x100.png'
+			subtitle: 'Pootlepress Pro bundle',
+			//image: 'https://your-plugin-site.com/logo-100x100.png'
 		} ).open( {
 			name: 'PPB, 18TP and SFP',
 			licenses: sitesLicense,

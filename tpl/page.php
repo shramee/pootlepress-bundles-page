@@ -248,14 +248,6 @@
 	</div>
 </div>
 
-<div id="slide3" class="slide">
-	<div class="col-full">
-		<h2>Trusted by over 10,000 WooCommerce Businesses and Online Shops</h2>
-		<?php echo do_shortcode( '[freemius-testimonials plugin=269]' ) ?>
-		<a class="button" href="#slide2">Buy now</a>
-	</div>
-</div>
-
 <script>
 	jQuery( function ( $ ) {
 		$( window ).resize( function () {

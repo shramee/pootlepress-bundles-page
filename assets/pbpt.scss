@@ -8,15 +8,10 @@ nav.secondary-navigation {
 	margin: 0 !important;
 }
 
-#content > .col-full {
-	max-width: none;
-	margin: 0;
-	padding: 0;
-}
-
 .slide {
 	position: relative;
 	overflow: hidden;
+	margin: 0 calc( -50vw + 50% );
 	* {
 		color: inherit;
 	}
