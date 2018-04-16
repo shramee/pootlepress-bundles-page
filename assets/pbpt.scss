@@ -226,6 +226,16 @@ nav.secondary-navigation {
 			color: #fff;
 			display: block;
 			margin: 7px;
+			opacity: .88;
+			-webkit-transform: scale( .99 );
+			transform: scale( .99 );
+			-webkit-transition: -webkit-transform 250ms;
+			transition: transform 250ms;
+			&:hover {
+				-webkit-transform: scale( 1 );
+				transform: scale( 1 );
+				opacity: 1;
+			}
 		}
 	}
 	.ecomm-bundle {
