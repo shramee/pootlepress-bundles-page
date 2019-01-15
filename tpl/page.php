@@ -67,7 +67,9 @@
 
 				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
-				<p><i class="fa fa-close"></i></p>
+				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
+
+				<p><i class="fa fa-close fa-times"></i></p>
 
 				<a class="button">Buy now</a>
 
@@ -85,7 +87,9 @@
 								alt="pootle pagebuilder pro" width="599" height="121"
 								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
 
-				<p><i class="fa fa-close"></i></p>
+				<p><i class="fa fa-close fa-times"></i></p>
+
+				<p><i class="fa fa-close fa-times"></i></p>
 
 				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
@@ -106,6 +110,8 @@
 								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
 
 				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
+
+				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
 
 				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
@@ -131,7 +137,9 @@
 
 				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
-				<p><i class="fa fa-close"></i></p>
+				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
+
+				<p><i class="fa fa-close fa-times"></i></p>
 
 				<a class="button">Buy now</a>
 
@@ -149,7 +157,9 @@
 								alt="pootle pagebuilder pro" width="599" height="121"
 								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
 
-				<p><i class="fa fa-close"></i></p>
+				<p><i class="fa fa-close fa-times"></i></p>
+
+				<p><i class="fa fa-close fa-times"></i></p>
 
 				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
@@ -170,6 +180,8 @@
 								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
 
 				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
+
+				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
 
 				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
@@ -196,7 +208,9 @@
 
 				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
-				<p><i class="fa fa-close"></i></p>
+				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
+
+				<p><i class="fa fa-close fa-times"></i></p>
 
 				<a class="button">Buy now</a>
 
@@ -215,7 +229,9 @@
 								alt="pootle pagebuilder pro" width="599" height="121"
 								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
 
-				<p><i class="fa fa-close"></i></p>
+				<p><i class="fa fa-close fa-times"></i></p>
+
+				<p><i class="fa fa-close fa-times"></i></p>
 
 				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
@@ -237,6 +253,8 @@
 								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
 
 				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
+
+				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
 
 				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
 
