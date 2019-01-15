@@ -13,7 +13,7 @@
 
 		<h1 data-center="margin: 5vh 0 0;" data-top-bottom="margin: 25vh 0 0;">
 			The Pootle<span style="font-family: 'Lobster', cursive">press</span> Bundles</h1>
-		<h3 data-center="margin: 3vh 0 0;" data-top-bottom="margin: 7vh 0 0;">Save up to 25% with a Pootle bundle</h3>
+		<h3 data-center="margin: 3vh 0 0;" data-top-bottom="margin: 7vh 0 0;">Save up to 40% with a Pootle bundle</h3>
 
 		<i class="fa fa-chevron-down" data-center="margin: 3vh auto 0;" data-top-bottom="margin: 5vh auto 0;"></i>
 
