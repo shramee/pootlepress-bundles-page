@@ -1,5 +1,70 @@
 <?php
 
+/**
+ * @param $pricing array
+ * 	'Single' => [ 125, 155, 185 ]
+ */
+function products_table( $pricing ) {
+
+	$plans = [
+		'ecomm' => [
+			'label' => '<i class="fa fa-shopping-bag"></i> Ecommerce bundle',
+			'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', ],
+		],
+		'design' => [
+			'label' => '<i class="fa fa-paint-brush"></i> Designer bundle',
+			'features' => [ 'ppb', '18p', ],
+		],
+		'pro' => [
+			'label' => '<i class="fa fa-bolt"></i> Professional bundle',
+			'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', '18p', ],
+		],
+	];
+
+	$features = [
+		'ppb' => '<p><img class="aligncenter size-full wp-image-35151"
+							src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
+							alt="pootle pagebuilder pro" width="599" height="121"
+							data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>',
+
+		'sfp' => '<p>Storefront <span style="font-family: Lobster, cursive">Pro</span></p>',
+
+		'sfb' => '<p>Storefront <span style="font-family: Lobster, cursive">Blocks</span></p>',
+
+		'wbk' => '<p>WooBuilder <span style="font-family: Lobster, cursive">Blocks</span></p>',
+
+		'18p' => '<p>18tags <span style="font-family: Lobster, cursive">Pro</span></p>',
+
+	];
+
+	foreach( $plans as $id => $info ) {
+		?>
+		<div class="<?php echo $id; ?>-bundle bundle-features">
+
+			<h3><?php echo $info['label'] ?></h3>
+
+			<p><span class="price"><?php echo $pricing[ $id ]; ?></span></p>
+
+			<p class="license-description">
+				<span class="site-count"><?php echo $pricing['label']; ?></span>
+				<?php echo $pricing['label'] === 'Single' ? 'site' : 'sites'; ?></p>
+
+			<?php
+			foreach ( $features as $f => $f_html ) {
+				if ( in_array( $f, $info['features'] ) ) {
+					echo $f_html;
+				} else {
+					echo '<p><i class="fa fa-close fa-times"></i></p>';
+				}
+			}
+			?>
+
+			<a class="button">Buy now</a>
+
+		</div>
+		<?php
+	}
+}
 
 ?>
 <script src="https://checkout.freemius.com/checkout.min.js"></script>
@@ -52,215 +117,34 @@
 
 		<div id="license-1" class="table pricing-tabs">
 
-			<div class="ecomm-bundle bundle-features">
-
-				<h3><i class="fa fa-shopping-bag"></i> Ecommerce bundle</h3>
-
-				<p><span class="price">$125</span></p>
-
-				<p class="license-description"><span class="site-count">Single</span> site</p>
-
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
-
-			<div class="design-bundle bundle-features">
-				<h3><i class="fa fa-paint-brush"></i> Designer bundle</h3>
-
-				<p><span class="price">$155</span></p>
-
-				<p class="license-description"><span class="site-count">Single</span> site</p>
-
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
-
-			<div class="pro-bundle bundle-features">
-				<h3><i class="fa fa-bolt"></i> Professional bundle</h3>
-
-				<p><span class="price">$185</span></p>
-
-				<p class="license-description"><span class="site-count">Single</span> site</p>
-
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
-
-				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
+			<?php products_table( [
+				'label'  => 'Single',
+				'ecomm'  => 125,
+				'design' => 155,
+				'pro'    => 185,
+			] ); ?>
 
 		</div>
 
 		<div id="license-5" class="table pricing-tabs" style="display:none;">
 
-			<div class="ecomm-bundle bundle-features">
-
-				<h3><i class="fa fa-shopping-bag"></i> Ecommerce bundle</h3>
-
-				<p><span class="price">$155</span></p>
-
-				<p class="license-description"><span class="site-count">Five</span> sites</p>
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
-
-			<div class="design-bundle bundle-features">
-
-				<h3><i class="fa fa-paint-brush"></i> Designer bundle</h3>
-
-				<p><span class="price">$200</span></p>
-
-				<p class="license-description"><span class="site-count">Five</span> sites</p>
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
-
-			<div class="pro-bundle bundle-features">
-
-				<h3><i class="fa fa-bolt"></i> Professional bundle</h3>
-
-				<p><span class="price">$259</span></p>
-
-				<p class="license-description"><span class="site-count">Five</span> sites</p>
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
-
-				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
+			<?php products_table( [
+				'label'  => 'Five',
+				'ecomm'  => 155,
+				'design' => 200,
+				'pro'    => 259,
+			] ); ?>
 
 		</div>
 
 		<div id="license-unlimited" class="table pricing-tabs" style="display:none;">
 
-			<div class="ecomm-bundle bundle-features">
-
-				<h3><i class="fa fa-shopping-bag"></i> Ecommerce bundle</h3>
-
-				<p><span class="price">$260</span></p>
-
-				<p class="license-description"><span class="site-count">Unlimited</span> sites</p>
-
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
-
-			<div class="design-bundle bundle-features">
-
-				<h3><i class="fa fa-paint-brush"></i> Designer bundle</h3>
-
-				<p><span class="price">$225</span></p>
-
-				<p class="license-description"><span class="site-count">Unlimited</span> sites</p>
-
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<p><i class="fa fa-close fa-times"></i></p>
-
-				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
-
-			<div class="pro-bundle bundle-features">
-
-				<h3><i class="fa fa-bolt"></i> Professional bundle</h3>
-
-				<p><span class="price">$365</span></p>
-
-				<p class="license-description"><span class="site-count">Unlimited</span> sites</p>
-
-				<p><img class="aligncenter size-full wp-image-35151"
-								src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-								alt="pootle pagebuilder pro" width="599" height="121"
-								data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<p>Storefront <span style="font-family: 'Lobster', cursive">Blocks</span></p>
-
-				<p>18tags <span style="font-family: 'Lobster', cursive">Pro</span></p>
-
-				<a class="button">Buy now</a>
-
-			</div>
+			<?php products_table( [
+				'label'  => 'Unlimited',
+				'ecomm'  => 260,
+				'design' => 225,
+				'pro'    => 365,
+			] ); ?>
 
 		</div>
 	</div>
