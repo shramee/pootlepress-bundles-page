@@ -27,11 +27,11 @@ function products_table( $pricing ) {
 							alt="pootle pagebuilder pro" width="599" height="121"
 							data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>',
 
+		'wbk' => '<p>WooBuilder <span style="font-family: Lobster, cursive">Blocks</span></p>',
+
 		'sfp' => '<p>Storefront <span style="font-family: Lobster, cursive">Pro</span></p>',
 
 		'sfb' => '<p>Storefront <span style="font-family: Lobster, cursive">Blocks</span></p>',
-
-		'wbk' => '<p>WooBuilder <span style="font-family: Lobster, cursive">Blocks</span></p>',
 
 		'18p' => '<p>18tags <span style="font-family: Lobster, cursive">Pro</span></p>',
 
