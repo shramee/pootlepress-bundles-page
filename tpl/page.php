@@ -1,71 +1,75 @@
 <?php
 
-/**
- * @param $pricing array
- * 	'Single' => [ 125, 155, 185 ]
- */
-function products_table( $pricing ) {
+if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
+	/**
+	 * @param $pricing array
+	 * 'label' => Label to show
+	 * 'ecomm' => Ecommerce bundle price
+	 * 'design' => Design bundle price
+	 * 'pro' => Pro bundle price
+	 */
+	function pootlepress_bundles_products_table( $pricing ) {
 
-	$plans = [
-		'ecomm' => [
-			'label' => '<i class="fa fa-shopping-bag"></i> Ecommerce bundle',
-			'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', ],
-		],
-		'design' => [
-			'label' => '<i class="fa fa-paint-brush"></i> Designer bundle',
-			'features' => [ 'ppb', '18p', ],
-		],
-		'pro' => [
-			'label' => '<i class="fa fa-bolt"></i> Professional bundle',
-			'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', '18p', ],
-		],
-	];
+		$plans = [
+			'ecomm'  => [
+				'label'    => '<i class="fa fa-shopping-bag"></i> Ecommerce bundle',
+				'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', ],
+			],
+			'design' => [
+				'label'    => '<i class="fa fa-paint-brush"></i> Designer bundle',
+				'features' => [ 'ppb', '18p', ],
+			],
+			'pro'    => [
+				'label'    => '<i class="fa fa-bolt"></i> Professional bundle',
+				'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', '18p', ],
+			],
+		];
 
-	$features = [
-		'ppb' => '<p><img class="aligncenter size-full wp-image-35151"
+		$features = [
+			'ppb' => '<p><img class="aligncenter size-full wp-image-35151"
 							src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
 							alt="pootle pagebuilder pro" width="599" height="121"
 							data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>',
 
 		'wbk' => '<p>WooBuilder <span style="font-family: Lobster, cursive">Blocks</span></p>',
 
-		'sfp' => '<p>Storefront <span style="font-family: Lobster, cursive">Pro</span></p>',
+			'sfp' => '<p>Storefront <span style="font-family: Lobster, cursive">Pro</span></p>',
 
-		'sfb' => '<p>Storefront <span style="font-family: Lobster, cursive">Blocks</span></p>',
+			'sfb' => '<p>Storefront <span style="font-family: Lobster, cursive">Blocks</span></p>',
 
-		'18p' => '<p>18tags <span style="font-family: Lobster, cursive">Pro</span></p>',
+			'18p' => '<p>18tags <span style="font-family: Lobster, cursive">Pro</span></p>',
 
-	];
+		];
 
-	foreach( $plans as $id => $info ) {
-		?>
-		<div class="<?php echo $id; ?>-bundle bundle-features">
-
-			<h3><?php echo $info['label'] ?></h3>
-
-			<p><span class="price"><?php echo $pricing[ $id ]; ?></span></p>
-
-			<p class="license-description">
-				<span class="site-count"><?php echo $pricing['label']; ?></span>
-				<?php echo $pricing['label'] === 'Single' ? 'site' : 'sites'; ?></p>
-
-			<?php
-			foreach ( $features as $f => $f_html ) {
-				if ( in_array( $f, $info['features'] ) ) {
-					echo $f_html;
-				} else {
-					echo '<p><i class="fa fa-close fa-times"></i></p>';
-				}
-			}
+		foreach ( $plans as $id => $info ) {
 			?>
+			<div class="<?php echo $id; ?>-bundle bundle-features">
 
-			<a class="button">Buy now</a>
+				<h3><?php echo $info['label'] ?></h3>
 
-		</div>
-		<?php
+				<p><span class="price"><?php echo $pricing[ $id ]; ?></span></p>
+
+				<p class="license-description">
+					<span class="site-count"><?php echo $pricing['label']; ?></span>
+					<?php echo $pricing['label'] === 'Single' ? 'site' : 'sites'; ?></p>
+
+				<?php
+				foreach ( $features as $f => $f_html ) {
+					if ( in_array( $f, $info['features'] ) ) {
+						echo $f_html;
+					} else {
+						echo '<p><i class="fa fa-close fa-times"></i></p>';
+					}
+				}
+				?>
+
+				<a class="button">Buy now</a>
+
+			</div>
+			<?php
+		}
 	}
 }
-
 ?>
 <script src="https://checkout.freemius.com/checkout.min.js"></script>
 <script src="<?php echo PBPTDIR ?>assets/pbpt.js?v=<?php echo PBPTDIR_VER ?>"></script>
@@ -117,33 +121,33 @@ function products_table( $pricing ) {
 
 		<div id="license-1" class="table pricing-tabs">
 
-			<?php products_table( [
+			<?php pootlepress_bundles_products_table( [
 				'label'  => 'Single',
-				'ecomm'  => 125,
-				'design' => 155,
-				'pro'    => 185,
+				'ecomm'  => '$125',
+				'design' => '$155',
+				'pro'    => '$185',
 			] ); ?>
 
 		</div>
 
 		<div id="license-5" class="table pricing-tabs" style="display:none;">
 
-			<?php products_table( [
+			<?php pootlepress_bundles_products_table( [
 				'label'  => 'Five',
-				'ecomm'  => 155,
-				'design' => 200,
-				'pro'    => 259,
+				'ecomm'  => '$155',
+				'design' => '$200',
+				'pro'    => '$259',
 			] ); ?>
 
 		</div>
 
 		<div id="license-unlimited" class="table pricing-tabs" style="display:none;">
 
-			<?php products_table( [
+			<?php pootlepress_bundles_products_table( [
 				'label'  => 'Unlimited',
-				'ecomm'  => 260,
-				'design' => 225,
-				'pro'    => 365,
+				'ecomm'  => '$260',
+				'design' => '$225',
+				'pro'    => '$365',
 			] ); ?>
 
 		</div>
