@@ -31,7 +31,7 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 							alt="pootle pagebuilder pro" width="599" height="121"
 							data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>',
 
-		'wbk' => '<p>WooBuilder <span style="font-family: Lobster, cursive">Blocks</span></p>',
+			'wbk' => '<p><span style="font-family: Lobster, cursive">Woo</span>Builder</p>',
 
 			'sfp' => '<p>Storefront <span style="font-family: Lobster, cursive">Pro</span></p>',
 
