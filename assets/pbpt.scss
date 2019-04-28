@@ -1,5 +1,4 @@
 .shb-header-bar, .secondary-navigation, #masthead, .header-widget-region,
-
 .woocommerce-breadcrumb, .entry-header, #sidebar, #colophon {
 	display: none;
 }
@@ -86,6 +85,7 @@ nav.secondary-navigation {
 		z-index: 1;
 		text-shadow: 0.01em 0.01em 0.025em #259;
 		letter-spacing: 0.025em;
+		color: #fff;
 	}
 	h3 {
 		font-size: 34px;

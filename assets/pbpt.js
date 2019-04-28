@@ -1,6 +1,7 @@
 jQuery( function ( $ ) {
 	var $tabs = $( '.pricing-tabs' ), sitesLicense = 1;
 
+
 	$( '[name="licensed-site"]' ).change( function ( e ) {
 		var $t = $( this );
 		sitesLicense = $t.val();

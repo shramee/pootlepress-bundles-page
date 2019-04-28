@@ -70,6 +70,22 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 		}
 	}
 }
+
+if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
+	?>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script>
+		ppbSkrollr = false;
+		if ( ! /Android|iPhone|iPad|iPod|BlackBerry/i.test( navigator.userAgent || navigator.vendor || a.opera ) ) {
+			ppbSkrollr = skrollr.init( {
+				forceHeight    : false,
+				smoothScrolling: false,
+			} );
+		}
+	</script>
+	<?php
+}
+
 ?>
 <script src="https://checkout.freemius.com/checkout.min.js"></script>
 <script src="<?php echo PBPTDIR ?>assets/pbpt.js?v=<?php echo PBPTDIR_VER ?>"></script>
@@ -156,6 +172,7 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 
 <script>
 	jQuery( function ( $ ) {
+		ppbSkrollr.refresh();
 		$( window ).resize( function () {
 			ppbSkrollr.refresh();
 		} );
