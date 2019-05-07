@@ -269,6 +269,17 @@ nav.secondary-navigation {
 	text-align: center;
 }
 
+div#primary,
+.ast-article-single {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#slide2 .col-full {
+    max-width: 1080px;
+    margin: auto;
+}
+
 @keyframes l2r2l {
 	0% {
 		transform: translateX(25%);
