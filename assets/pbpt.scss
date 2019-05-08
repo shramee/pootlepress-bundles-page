@@ -94,6 +94,8 @@ nav.secondary-navigation {
 
 	.fa-chevron-down {
 		display: block;
+		z-index: 9999999;
+		position: relative;
 		margin: auto;
 		width: 70px;
 		line-height: 70px;
