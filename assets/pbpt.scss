@@ -206,8 +206,10 @@ nav.secondary-navigation {
 		}
 
 		img {
-			width: 70%;
+			height: 40px;
+			width: auto;
 		}
+
 		p {
 			font-family: raleway, sans-serif;
 			font-size: 25px;
@@ -265,6 +267,9 @@ nav.secondary-navigation {
 		justify-content: stretch;
 	}
 
+	.fa-times {
+		color: #ccc;
+	}
 }
 
 #slide3 {

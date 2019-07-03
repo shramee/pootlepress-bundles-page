@@ -36,12 +36,12 @@ jQuery( function ( $ ) {
 		} );
 		e.preventDefault();
 	} );
-	$( '.design-bundle' ).on( 'click', '.button', function ( e ) {
+	$( '.blocks-bundle' ).on( 'click', '.button', function ( e ) {
 		FS.Checkout.configure( {
-			plugin_id: '1939',
-			plan_id: '2879',
-			public_key: 'pk_3cf0993f839aa420f8a420d5c6ea5',
-			subtitle: 'Pootlepress Design bundle',
+			plugin_id: '4040',
+			plan_id: '6526',
+			public_key: 'pk_9658533a196daf21269879627e07a',
+			subtitle: 'Pootlepress Blocks bundle',
 			//image: 'https://your-plugin-site.com/logo-100x100.png'
 		} ).open( {
 			name: 'PPB and 18TP',

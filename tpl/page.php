@@ -11,13 +11,13 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 	function pootlepress_bundles_products_table( $pricing ) {
 
 		$plans = [
+			'blocks' => [
+				'label'    => '<i class="fa fa-paint-brush"></i> Blocks bundle',
+				'features' => [ 'wbk', 'sfb', ],
+			],
 			'ecomm'  => [
 				'label'    => '<i class="fa fa-shopping-bag"></i> Ecommerce bundle',
 				'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', ],
-			],
-			'design' => [
-				'label'    => '<i class="fa fa-paint-brush"></i> Designer bundle',
-				'features' => [ 'ppb', '18p', ],
 			],
 			'pro'    => [
 				'label'    => '<i class="fa fa-bolt"></i> Professional bundle',
@@ -26,16 +26,17 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 		];
 
 		$features = [
+
+			'sfb' => '<p>Storefront <span style="font-family: Lobster, cursive">Blocks</span></p>',
+
+			'wbk' => '<p><span style="font-family: Lobster, cursive">Woo</span>Builder Blocks</p>',
+
 			'ppb' => '<p><img class="aligncenter size-full wp-image-35151"
 							src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
 							alt="pootle pagebuilder pro" width="599" height="121"
 							data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>',
 
-			'wbk' => '<p><span style="font-family: Lobster, cursive">Woo</span>Builder</p>',
-
 			'sfp' => '<p>Storefront <span style="font-family: Lobster, cursive">Pro</span></p>',
-
-			'sfb' => '<p>Storefront <span style="font-family: Lobster, cursive">Blocks</span></p>',
 
 			'18p' => '<p>18tags <span style="font-family: Lobster, cursive">Pro</span></p>',
 
@@ -139,8 +140,8 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 
 			<?php pootlepress_bundles_products_table( [
 				'label'  => 'Single',
+				'blocks' => '$75',
 				'ecomm'  => '$125',
-				'design' => '$155',
 				'pro'    => '$185',
 			] ); ?>
 
@@ -150,8 +151,8 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 
 			<?php pootlepress_bundles_products_table( [
 				'label'  => 'Five',
+				'blocks' => '$99',
 				'ecomm'  => '$155',
-				'design' => '$200',
 				'pro'    => '$259',
 			] ); ?>
 
@@ -161,8 +162,8 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 
 			<?php pootlepress_bundles_products_table( [
 				'label'  => 'Unlimited',
+				'blocks' => '$149',
 				'ecomm'  => '$260',
-				'design' => '$225',
 				'pro'    => '$365',
 			] ); ?>
 

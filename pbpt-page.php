@@ -9,7 +9,7 @@ Author Email: shramee.srivastav@gmail.com
 */
 
 define( 'PBPTDIR', plugin_dir_url( __FILE__ ) );
-define( 'PBPTDIR_VER', 1 );
+define( 'PBPTDIR_VER', '1.1.0' );
 
 add_action( 'init', function () {
 	remove_filter( 'get_the_excerpt', 'woo_remove_dropcap_from_excerpts' );
