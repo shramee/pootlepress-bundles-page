@@ -12,7 +12,7 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 
 		$plans = [
 			'blocks' => [
-				'label'    => '<i class="fa fa-paint-brush"></i> Blocks bundle',
+				'label'    => '<i class="fa fa-cubes"></i> Blocks bundle',
 				'features' => [ 'wbk', 'sfb', ],
 			],
 			'ecomm'  => [

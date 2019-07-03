@@ -2,7 +2,7 @@
 /*
 Plugin Name: Pootle bundles page
 Description: Pricing table for Pootle
-Version: 1.0
+Version: 1.1.0
 Author: Shramee Srivastav
 Author URI: http://shramee.com
 Author Email: shramee.srivastav@gmail.com
