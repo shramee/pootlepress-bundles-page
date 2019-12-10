@@ -186,7 +186,8 @@ nav.secondary-navigation {
 			}
 		}
 
-		.price {
+		.price,
+		.old-price {
 			display: block;
 			font-size: 43px;
 			line-height: 1;
@@ -199,9 +200,21 @@ nav.secondary-navigation {
 			padding-top: 25px;
 			&:after {
 				content: '/yr';
-				font-size: 20px;
+				font-size: .8em;
 				display: block;
 				opacity: .7;
+			}
+		}
+		.old-price {
+			background: none;
+			color: #999;
+			font-size: 23px;
+			width: 130px;
+			height: auto;
+			padding-top: 14px;
+			text-decoration: line-through;
+			&:after {
+				display: inline;
 			}
 		}
 

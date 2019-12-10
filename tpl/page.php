@@ -48,6 +48,11 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 
 				<h3><?php echo $info['label'] ?></h3>
 
+				<?php if ( ! empty( $pricing[ "-$id" ] ) ) {
+					?>
+					<p><span class="old-price"><?php echo $pricing[ "-$id" ]; ?></span></p>
+					<?php
+				} ?>
 				<p><span class="price"><?php echo $pricing[ $id ]; ?></span></p>
 
 				<p class="license-description">
@@ -139,10 +144,13 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 		<div id="license-1" class="table pricing-tabs">
 
 			<?php pootlepress_bundles_products_table( [
-				'label'  => 'Single',
-				'blocks' => '$75',
-				'ecomm'  => '$125',
-				'pro'    => '$185',
+				'label'   => 'Single',
+				'blocks'  => '$75',
+				'-blocks' => '$98',
+				'ecomm'   => '$125',
+				'-ecomm'  => '$246',
+				'pro'     => '$185',
+				'-pro'    => '$345',
 			] ); ?>
 
 		</div>
@@ -150,10 +158,20 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 		<div id="license-5" class="table pricing-tabs" style="display:none;">
 
 			<?php pootlepress_bundles_products_table( [
-				'label'  => 'Five',
-				'blocks' => '$99',
+				'label' => 'Five',
+
+				'blocks'  => '$99',
+				'-blocks' => '$490',
+//				'-blocks' => '$214',
+
 				'ecomm'  => '$155',
-				'pro'    => '$259',
+				'-ecomm' => '$1230',
+//				'-ecomm'  => '$760',
+
+				'pro'  => '$259',
+				'-pro' => '$1725',
+//				'-pro'    => '$1059',
+
 			] ); ?>
 
 		</div>
@@ -163,8 +181,11 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 			<?php pootlepress_bundles_products_table( [
 				'label'  => 'Unlimited',
 				'blocks' => '$149',
+				'-blocks' => '$398',
 				'ecomm'  => '$260',
+				'-ecomm'  => '$746',
 				'pro'    => '$365',
+				'-pro'    => '$895',
 			] ); ?>
 
 		</div>
