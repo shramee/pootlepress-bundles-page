@@ -17,28 +17,31 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 			],
 			'ecomm'  => [
 				'label'    => '<i class="fa fa-shopping-bag"></i> Ecommerce bundle',
-				'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', ],
+				'features' => [ 'bi', 'sfp', 'sfb', 'gb', 'wbk', 'woobar', ],
 			],
 			'pro'    => [
 				'label'    => '<i class="fa fa-bolt"></i> Professional bundle',
-				'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', '18p', ],
+				'features' => [ 'ppb', 'sfp', 'sfb', 'wbk', 'gb', '18p', 'woobar', 'bi',],
 			],
 		];
 
 		$features = [
 
-			'sfb' => '<p>Storefront <span style="font-family: Lobster, cursive">Blocks</span></p>',
+			// WooCommerce blocks
+			'sfb' => '<p>Storefront Blocks</p>',
+			'wbk' => '<p>WooBuilder Blocks</p>',
 
-			'wbk' => '<p><span style="font-family: Lobster, cursive">Woo</span>Builder Blocks</p>',
+			// Block tools
+			'gb' => '<p>Gutenberg Pro</p>',
+			'bi' => '<p>Block Injector</p>',
+			'woobar' => '<p>WooHoo Bar</p>',
 
-			'ppb' => '<p><img class="aligncenter size-full wp-image-35151"
-							src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"
-							alt="pootle pagebuilder pro" width="599" height="121"
-							data-mce-src="https://www.pootlepress.com/wp-content/uploads/2016/04/pootle-pagebuilder-pro.png"></p>',
+			// Theme customizations
+			'sfp' => '<p>Storefront Pro</p>',
+			'18p' => '<p>18tags Pro</p>',
 
-			'sfp' => '<p>Storefront <span style="font-family: Lobster, cursive">Pro</span></p>',
-
-			'18p' => '<p>18tags <span style="font-family: Lobster, cursive">Pro</span></p>',
+			// Page builder
+			'ppb' => '<p>Pootle PageBuilder Pro</p>',
 
 		];
 
@@ -48,11 +51,6 @@ if ( ! function_exists( 'pootlepress_bundles_products_table' ) ) {
 
 				<h3><?php echo $info['label'] ?></h3>
 
-				<?php if ( ! empty( $pricing[ "-$id" ] ) ) {
-					?>
-					<p><span class="old-price"><?php echo $pricing[ "-$id" ]; ?></span></p>
-					<?php
-				} ?>
 				<p><span class="price"><?php echo $pricing[ $id ]; ?></span></p>
 
 				<p class="license-description">
@@ -104,7 +102,7 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 
 		<h1 data-center="margin: 5vh 0 0;" data-top-bottom="margin: 25vh 0 0;">
 			The Pootle<span style="font-family: 'Lobster', cursive">press</span> Bundles</h1>
-		<h3 data-center="margin: 3vh 0 0;" data-top-bottom="margin: 7vh 0 0;">Save up to 40% with a Pootle bundle</h3>
+		<h3 data-center="margin: 3vh 0 0;" data-top-bottom="margin: 7vh 0 0;">Save over 75% with a Pootle bundle</h3>
 
 		<i class="fa fa-chevron-down" data-center="margin: 3vh auto 0;" data-top-bottom="margin: 5vh auto 0;"></i>
 
@@ -122,7 +120,7 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 		</div>
 
 		<img class="logo" src="https://www.pootlepress.com/wp-content/uploads/2017/06/pootlepress-logo-website.png"
-				 alt="PootlePress">
+			 alt="PootlePress">
 	</div>
 </div>
 
@@ -144,13 +142,10 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 		<div id="license-1" class="table pricing-tabs">
 
 			<?php pootlepress_bundles_products_table( [
-				'label'   => 'Single',
-				'blocks'  => '$75',
-				'-blocks' => '$98',
-				'ecomm'   => '$125',
-				'-ecomm'  => '$246',
-				'pro'     => '$185',
-				'-pro'    => '$345',
+				'label'  => 'Single',
+				'blocks' => '$75',
+				'ecomm'  => '$125',
+				'pro'    => '$185',
 			] ); ?>
 
 		</div>
@@ -158,20 +153,10 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 		<div id="license-5" class="table pricing-tabs" style="display:none;">
 
 			<?php pootlepress_bundles_products_table( [
-				'label' => 'Five',
-
-				'blocks'  => '$99',
-				'-blocks' => '$490',
-//				'-blocks' => '$214',
-
+				'label'  => 'Five',
+				'blocks' => '$99',
 				'ecomm'  => '$155',
-				'-ecomm' => '$1230',
-//				'-ecomm'  => '$760',
-
-				'pro'  => '$259',
-				'-pro' => '$1725',
-//				'-pro'    => '$1059',
-
+				'pro'    => '$259',
 			] ); ?>
 
 		</div>
@@ -181,11 +166,8 @@ if ( ! class_exists( 'Pootle_Page_Builder' ) ) {
 			<?php pootlepress_bundles_products_table( [
 				'label'  => 'Unlimited',
 				'blocks' => '$149',
-				'-blocks' => '$398',
 				'ecomm'  => '$260',
-				'-ecomm'  => '$746',
 				'pro'    => '$365',
-				'-pro'    => '$895',
 			] ); ?>
 
 		</div>
